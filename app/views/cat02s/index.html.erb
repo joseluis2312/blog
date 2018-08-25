@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cat02s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Codigo</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cat02s.each do |cat02| %>
+
+      <tr>
+        <td><%= cat02.id %></td>
+        <td><%= cat02.Codigo %></td>
+        <td><%= cat02.Descripcion %></td>
+        <td><%= link_to 'Show', cat02 %></td>
+        <td><%= link_to 'Edit', edit_cat02_path(cat02) %></td>
+        <td><%= link_to 'Destroy', cat02, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cat02', new_cat02_path %>

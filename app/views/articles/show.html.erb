@@ -1,0 +1,94 @@
+<h1><%= @article.title %></h1>
+
+
+<div>
+	<strong>BODY:</strong>
+	<%= @article.body %>
+</div><BR>
+
+  <div>
+	<strong>USER:</strong>
+	<% if @article.user.nil? %>
+	SIN USUARIO
+	<%else%>
+	<%= @article.user.email %>
+	<% end %>
+</div><BR>
+
+
+<div class="field">
+  <strong>Imagenx:</strong>
+<img src=<%= @article.cover.url() %>
+height="30%" width="30%" 
+alt="Sin t%c3%adtulo">
+</div>
+
+<div class="field">
+  <strong>Imagen:</strong>
+    <%= @article.cover.url() %>
+    <%= image_tag @article.cover.url() %>
+</div>
+
+
+<DIV>
+	<strong>Visitas:</strong>
+ <%= @article.visits_count %>
+</DIV><BR>
+
+<div class="field">
+	<h3>Comentarios</h3>
+	<%=render "comments/form"%>
+	<ul id="comments-box">
+	<% @article.comments.each do |comment| %>
+	<li>
+		<%= comment.id %> -
+		<%= comment.body %> - <%= comment.user.email %> 
+		
+	</li>
+	<% end %>
+	</ul>
+
+</div>
+
+<div>
+       <td><%= link_to 'Show', 'comment' %></td> 
+       k_to "Editar", ed'it_article_path(@article) ,class:"Texto_Red white"' %><br>
+  <div>
+
+
+
+<h1>Comments</h1>
+
+<table>
+  <thead>
+
+    <tr>
+	<th>Id</th>
+      <th>User</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @article.comments.each do |comment| %>
+      <tr>
+        <td><%= comment.id %></td>
+        <td><%= comment.user.email %></td>
+        <td><%= comment.body %></td>
+
+       <td><%= link_to 'Show', 'comment' %></td> 
+       <td><%= link_to 'Edit', 'edit_comment_path(@comment)' %></td>
+
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
+

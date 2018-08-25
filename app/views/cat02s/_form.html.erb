@@ -1,0 +1,42 @@
+
+<%= form_with(model: cat02,html:{id:"cat02s_form"}, local: true) do |form| %>
+  <% if cat02.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cat02.errors.count, "error") %> prohibited this cat02 from being saved:</h2>
+
+      <ul>
+      <% cat02.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<h1>PRUEBA</h1>
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id, id: :cat02_id, disabled: true %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :Codigo %>
+    <%= form.text_field :Codigo, id: :cat02_Codigo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Descripcion %>
+    <%= form.text_field :Descripcion, id: :cat02_Descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<script type="text/javascript">
+ $("cat02s_form").on("submit",function(){
+
+  $(:cat02_id).val(:cat02_Codigo)
+
+ });
+
+</script>
