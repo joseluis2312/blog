@@ -1,9 +1,1 @@
-<<<<<<< HEAD
 Estoy en la rama MASTER
-
-
-
-=======
-ESTOY EN pr05
-subir a PR05
->>>>>>> PR05
