@@ -1,11 +1,1 @@
-borra I7
-Modificacion 01
-Modificado en GITHUB
-modificado 02 I7
-modificado 03 i7
-Modificado en GITHUB 02
-Modificado en YOGA460 20180829 11:55
-Modificado en GITHUB 20180829 13:38
-Modificado en YOGA460 20180829 12:41
-Modificado en YOGA460 20180829 14:29 (¿PRUEBA?) NOP
-
+Estoy en la rama de pruebas
